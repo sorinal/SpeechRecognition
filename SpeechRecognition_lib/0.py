@@ -12,7 +12,7 @@ with sr.AudioFile(AUDIO_FILE) as source:
     audio = r.record(source)
 
 try:
-    print("you said ---  " + r.recognize_sphinx(audio) + "---")
+    print("---" + r.recognize_sphinx(audio) + "---")
 except sr.UnknownValueError:
     print("could not understand audio")
 except sr.RequestError as e:
